@@ -10,7 +10,8 @@ public class QueueOfString {
     }
 
     QueueOfString() {
-
+        first = null;
+        last = null;
     }
 
     public void enqueue(String item) {

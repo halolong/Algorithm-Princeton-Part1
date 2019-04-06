@@ -1,5 +1,8 @@
 package week2;
 
+
+import edu.princeton.cs.algs4.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -39,9 +42,23 @@ public class Main {
         queue.enqueue("4");
         System.out.println(queue.dequeue());
          */
+
+        /**
+         *
+         * for generic stack
         GenericStack<String> stack = new GenericStack<>();
         stack.push("1");
         stack.push("2");
         System.out.println(stack.pop());
+         */
+//
+        StackIterator<String> stackIterator = new StackIterator<>();
+        stackIterator.push("1");
+        stackIterator.push("2");
+        Iterator<String> iterator = stackIterator.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
     }
 }
