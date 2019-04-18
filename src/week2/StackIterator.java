@@ -5,16 +5,23 @@ import java.util.NoSuchElementException;
 
 /**
  * Created by longxingyu on 2019/4/6.
+ *
+ * 首先这个类需要实现Iterable这个接口
+ * 然后 iterator() 方法使得到ListIterator<Item>
+ *
  * 一定要注意<Item>不要忘记
  */
 public class StackIterator<Item> implements Iterable<Item> {
 
-    private Node<Item> first;
+    private Node first;
     private int n;
 
-    private static class Node<Item> {
+    /**
+     * 这里的node是不用写成Node<Item>
+     */
+    private class Node {
         private Item item;
-        private Node<Item> next;
+        private Node next;
     }
 
     public StackIterator(){
@@ -31,8 +38,8 @@ public class StackIterator<Item> implements Iterable<Item> {
     }
 
     public void push(Item item) {
-        Node<Item> oldFirst = first;
-        first = new Node<Item>();
+        Node oldFirst = first;
+        first = new Node();
         first.item = item;
         first.next = oldFirst;
         n++;
@@ -47,14 +54,14 @@ public class StackIterator<Item> implements Iterable<Item> {
     }
 
     public Iterator<Item> iterator() {
-        return new ListIterator<Item>(first);
+        return new ListIterator(first);
     }
 
 
-    private class ListIterator<Item> implements Iterator<Item> {
-        private Node<Item> current;
+    private class ListIterator implements Iterator<Item> {
+        private Node current;
 
-        ListIterator(Node<Item> first) {
+        ListIterator(Node first) {
             current = first;
         }
 
