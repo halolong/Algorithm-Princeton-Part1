@@ -1,8 +1,7 @@
 package week2.assignment;
 
-import week2.Iterable;
-import week2.Iterator;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
@@ -11,6 +10,14 @@ import java.util.NoSuchElementException;
 public class Deque<Item> implements Iterable<Item> {
 
     private Node first, last; //双向链表一开始也是有两个点
+    /**
+     * 双向链表的结构如下
+     *
+     *  first                   last
+     *
+     *  A  --next-> B  --next-> C
+     *     <-pre--     <-pre--
+     */
     private int size;
 
 
@@ -45,7 +52,7 @@ public class Deque<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldFirst;
-        first.pre = null; // 这里有点疑惑，就是插入的方向
+        first.pre = null; // 从左到右 表示为first 和 last
         if (isEmpty()) {
             last = first;
         } else {
@@ -62,6 +69,7 @@ public class Deque<Item> implements Iterable<Item> {
         last.item = item;
         last.next = null;
         last.pre = oldLast;
+        // 这一步很重要，对于是否只有一个点
         if (isEmpty()) {
             first = last;
         } else {
@@ -113,18 +121,6 @@ public class Deque<Item> implements Iterable<Item> {
             return cur != null;
         }
         public Item next() {
-            /**
-             * 这个是把它弹出来
-                Item item = first.item;
-                first = first.next;
-                size--;
-                if (isEmpty()) {
-                    last = first;
-                } else {
-                    first.pre = null;
-                }
-                return item;
-             */
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
