@@ -4,11 +4,23 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
+    /**
+     *  n = 3
+     *  其数组sites
+     *
+     *  [top]    [ ]    [ ]    [ ]
+     *  [ ]      [1]     [2]    [3]
+     *  [ ]      [4]     [5]    [6]
+     *  [bottom] [7]     [8]    [9]
+     *
+     *  实际的则是 1~9这一块是操作的。
+     */
     private int n;
     private int numOfOpenSites = 0;
     private boolean[][] sites;
     private WeightedQuickUnionUF ufModel;//这个用来检测是否percolate
-    private WeightedQuickUnionUF ufModelForFullTest; //这个用来检测是否full
+    private WeightedQuickUnionUF ufModelForFullTest; //这个用来检测是否full  防止backwash （这个是由下面的虚拟节点造成的，所以只能新建一个来检测，
+    // 如果是用上面那个ufModel 这样会导致，一些点不能full的回流，因为其连通性）
     private int topNodeIndex, bottomNodeIndex;
 
     // 构造函数
@@ -18,10 +30,10 @@ public class Percolation {
         }
         this.n = n;
         this.sites = new boolean[n + 1][n + 1];
-        this.ufModel = new WeightedQuickUnionUF(n * n + 2);
-        this.ufModelForFullTest = new WeightedQuickUnionUF(n * n + 1);
-        this.topNodeIndex = 0; // 作为上面的点
-        this.bottomNodeIndex = n * n + 1; //作为底部连接的点
+        this.ufModel = new WeightedQuickUnionUF(n * n + 2); // 这里加2是因为在乎其topIndex和bottomIndex
+        this.ufModelForFullTest = new WeightedQuickUnionUF(n * n + 1); // 只关心bottomIndex
+        this.topNodeIndex = 0; // 作为上面的点 virtual point
+        this.bottomNodeIndex = n * n + 1; //作为底部连接的点 virtual point
         connectTopAndBottomNode();
     }
 
@@ -58,7 +70,7 @@ public class Percolation {
         return sites[row][col];
     }
 
-    // is site (row, col) full?
+    // is site (row, col) full? 这里的full表示该点是否能够连接到第一行
     // A full site is an open site that
     // can be connected to an open site in the top
     // row via a chain of neighboring (left, right, up, down)
