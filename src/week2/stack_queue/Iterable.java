@@ -1,4 +1,4 @@
-package week2;
+package week2.stack_queue;
 
 /**
  * Created by longxingyu on 2019/4/6.

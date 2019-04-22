@@ -1,7 +1,5 @@
-package week2;
+package week2.stack_queue;
 
-
-import edu.princeton.cs.algs4.Stack;
 
 public class Main {
 

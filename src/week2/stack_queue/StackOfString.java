@@ -1,4 +1,4 @@
-package week2;
+package week2.stack_queue;
 
 public class StackOfString {
 

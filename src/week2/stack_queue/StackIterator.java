@@ -1,6 +1,5 @@
-package week2;
+package week2.stack_queue;
 
-import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
 /**
