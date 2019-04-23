@@ -9,8 +9,8 @@ This course covers the essential information that every serious programmer needs
 Week | Core | Progress| Plan time |Finish time | Assignment score |
 -----|--------------|-----------------------|------|----| --- |
 1    | introduction & Union Find | ########## 100% | NAN| ~-2019.04.02 | 100
-2    | Stack, Queue & Elementary Sorts | #########*  90% | 2019.04.24 | Not Availble | 100
-3    | MergeSort, QuickSort | ********** 0% | 2019.04.28 | Not Availble
+2    | Stack, Queue & Elementary Sorts | ##########  100% | 2019.04.24 | 2019.04.23 | 100
+3    | MergeSort, QuickSort | ##******** 20% | 2019.04.28 | Not Available 
 
 ## Next step
-Finish the rest of week 2
+Week 3

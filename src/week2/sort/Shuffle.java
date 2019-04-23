@@ -7,7 +7,7 @@ public class Shuffle {
     public void sort(Comparable[] num) {
         int N = num.length;
         for (int i = 0; i < N; i++) {
-            int r = StdRandom.uniform(i + 1);
+            int r = StdRandom.uniform(i + 1); // 生成 0, i的数字
             exch(num, i, r);
         }
     }
