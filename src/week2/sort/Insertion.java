@@ -1,6 +1,6 @@
 package week2.sort;
 
-public class InsertionSort {
+public class Insertion {
 
     public static void sort(Comparable[] nums) {
         int N = nums.length;

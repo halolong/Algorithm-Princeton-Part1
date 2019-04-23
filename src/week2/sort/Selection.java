@@ -1,6 +1,6 @@
 package week2.sort;
 
-public class SelectionSort{
+public class Selection {
 
     /**
      * 利用Comparable来实现其选择排序
