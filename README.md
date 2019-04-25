@@ -10,7 +10,7 @@ Week | Core | Progress| Plan time |Finish time | Assignment score |
 -----|--------------|-----------------------|------|----| --- |
 1    | introduction & Union Find | ########## 100% | NAN| ~-2019.04.02 | 100
 2    | Stack, Queue & Elementary Sorts | ##########  100% | 2019.04.24 | 2019.04.23 | 100
-3    | MergeSort, QuickSort | ##******** 20% | 2019.04.28 | Not Available 
+3    | MergeSort, QuickSort | ###******* 30% | 2019.04.28 | Not Available 
 
 ## Next step
 Week 3
