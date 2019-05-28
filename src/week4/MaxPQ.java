@@ -67,12 +67,11 @@ public class MaxPQ<Key extends Comparable<Key>>{
         maxPQ.insert(2);
         maxPQ.insert(3);
         maxPQ.insert(10);
-        System.out.println(maxPQ.delMax());
-        System.out.println(maxPQ.delMax());
-        System.out.println(maxPQ.delMax());
-        System.out.println(maxPQ.delMax());
-        System.out.println(maxPQ.delMax());
-
-
+        System.out.println(maxPQ.N);
+//        System.out.println(maxPQ.delMax());
+//        System.out.println(maxPQ.delMax());
+//        System.out.println(maxPQ.delMax());
+//        System.out.println(maxPQ.delMax());
+//        System.out.println(maxPQ.delMax());
     }
 }

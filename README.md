@@ -42,7 +42,12 @@ Week | Core | Progress| Plan time |Finish time | Assignment score
   * [ThreeWayQuick](https://github.com/halolong/Algorithm-Princeton-Part1/blob/master/src/week3/ThreeWayQuick.java)
 * Week 4: Priority Queues, Elementary Symbol Tables
   * [MaxPQ](https://github.com/halolong/Algorithm-Princeton-Part1/blob/master/src/week4/MaxPQ.java)
-  * [UnorderedMaxPQ](https://github.com/halolong/Algorithm-Princeton-Part1/blob/master/src/week3/UnorderedMaxPQ.java)
+  
+  * [UnorderedMaxPQ](https://github.com/halolong/Algorithm-Princeton-Part1/blob/master/src/week4/UnorderedMaxPQ.java)
+  
+  * [Heap (sort)](https://github.com/halolong/Algorithm-Princeton-Part1/blob/master/src/week3/Heap.java)
+  
+    
 
 ## Next Step
 
